@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Profile from './Profile/Profile.js'
+import image from './logo.svg'
+import PropTypes from "prop-types";
+function handleName(name) {
+  alert(name)
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
 }
+function App() {
+     return (
+       <>
+       <Profile fullname="John" bio="lorem ipsum" profession="lorem ipsum" handleName={handleName} >{image}</Profile>
+    </>
+     )
+  
+}
+
+
 
 export default App;
